@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=0.5 maxmum-scale=1.0"/>
     <link rel="stylesheet" type="text/css" href="main.css">
     <title>HOMEPAGE RU</title>
 </head>
@@ -11,20 +11,19 @@
 <div class="navbar">
 
     <!-- Left-aligned links (default) -->
-    <a href="#">Homepage</a>
-    <a href="#">About Us</a>
-    <a href="#">Contact Us</a>
-    <a href="#">Support</a>
+    <a href="homepage_G.html">Homepage</a>
+    <a href="aboutUs_G.html">About Us</a>
+    <a href="contactUs_G.html">Contact Us</a>
+    <a href="support_G.html">Support</a>
 
     <!-- Right-aligned links -->
     <div class="navbar-right">
-        <a href="#">My Profile</a>
-        <a href="#">Logout</a>
+        <a href="login.html">Login</a>
+        <a href="registration.html">Registration</a>
     </div>
 
 </div>
 
-<hr>
 <div class="big-image">
     <div id="list_journey">
         <form action="#">
@@ -45,10 +44,16 @@
             <br>
             <input type="date" id="date" name="date">
             <br>
-            <input type="submit" value="List Journeys">
+            <button type="submit" class="listbtn"><a href="listOfJourneys_G.html">List Journeys</a></button>
         </form>
     </div>
 </div>
+
+
+<form action="#">
+    <input type="text" id="pnrinput" placeholder="Enter pnr number:" name="pnr">
+    <button type="submit" class="pnrbtn"><a href="viewTicketDetail_G.html">Find Ticket</a></button>
+</form>
 
 
 <h5 class="h5_class">MOST TRAVELED CITIES</h5>
@@ -79,19 +84,19 @@
     <div class="box_inside_icons">
         <div class="image_icon"><img class="img_size" src="img/ann.png"></div>
         <h3 class="h4_class"> Announcements </h3>
-        <p style="font-family: 'Candara Light'">There are many variations of passages of Lorem Ipsum available,</p>
+        <p class="homepage_pid">There are many variations of passages of Lorem Ipsum available,</p>
     </div>
 
     <div class="box_inside_icons">
         <div class="image_icon"><img class="img_size" src="img/campaing.png"></div>
         <h3 class="h4_class"> Campaigns </h3>
-        <p style="font-family: 'Candara Light'">There are many variations of passages of Lorem Ipsum available,</p>
+        <p class="homepage_pid">There are many variations of passages of Lorem Ipsum available,</p>
     </div>
 
     <div class="box_inside_icons">
         <div class="image_icon"><img class="img_size" src="img/news.png"></div>
         <h3 class="h4_class"> News </h3>
-        <p style="font-family: 'Candara Light'">There are many variations of passages of Lorem Ipsum available,</p>
+        <p class="homepage_pid">There are many variations of passages of Lorem Ipsum available,</p>
     </div>
 </div>
 
@@ -118,7 +123,7 @@
 
     <div class="col_class">
         <h2 class="topic">Contact Us</h2>
-        <p id="phone_num"> <img src="img/telephone.png" width="35px" height="35px"> 0890 960 66 77 </p>
+        <p id="phone_num"><img src="img/telephone.png" width="35px" height="35px"> 0890 960 66 77 </p>
         <ul>
             <p id="text_socialmedia">Social Medias</p>
             <div class="div_social_medias">
@@ -139,10 +144,10 @@
         </ul>
     </div>
 </div>
-<hr>
+
 <footer class="main_footer">
     <h5 id="footer_text"> All Rights Reserved By BUS TICKETLY. © 2020</h5>
 </footer>
-<hr>
+
 </body>
 </html>
