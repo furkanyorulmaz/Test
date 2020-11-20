@@ -3,24 +3,24 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=0.5 maxmum-scale=1.0"/>
-    <link rel="stylesheet" type="text/css" href="main.css">
+    <link rel="stylesheet" type="text/css" href="../WebPages/main.css">
 
-    <title>ABOUT US RU</title>
+    <title>ABOUT US G</title>
 </head>
 <body>
 <!-- Navbar -->
 <div class="navbar">
 
     <!-- Left-aligned links (default) -->
-    <a href="homepage_RU.html">Homepage</a>
-    <a href="aboutUs_RU.html">About Us</a>
-    <a href="contactUs_RU.html">Contact Us</a>
-    <a href="support_RU.html">Support</a>
+    <a href="homepage_G.php">Homepage</a>
+    <a href="aboutUs_G.php">About Us</a>
+    <a href="contactUs_G.php">Contact Us</a>
+    <a href="support_G.php">Support</a>
 
     <!-- Right-aligned links -->
     <div class="navbar-right">
-        <a href="registerUserProfile.html">My Profile</a>
-        <a href="homepage_G.html">Logout</a>
+        <a href="login.php">Login</a>
+        <a href="registration.php">Registration</a>
     </div>
 
 </div>
@@ -46,8 +46,7 @@
         Company’s strong status in the sector. Adopting the principle of not making any compromises in service quality,
         BusTicketly's passenger transportation target to reach in the year 2015 is 26 million.
     </p>
-    <br>
-    <br>
+
     <br>
     <h2 style="text-align:center; color:dodgerblue">Our Team</h2>
     <div class="row">
@@ -60,14 +59,14 @@
 
         <div class="column_aboutUs">
             <h2>Göksu Pekacar</h2>
-            <p class="title">Art Director</p>
+            <p class="title">Director</p>
             <p>Some text that describes me lorem ipsum ipsum lorem.</p>
             <p>goksu@busmail.com</p>
         </div>
 
         <div class="column_aboutUs">
             <h2>Ümmügülsüm Çamoğlu</h2>
-            <p class="title">Designer</p>
+            <p class="title">Officer</p>
             <p>Some text that describes me lorem ipsum ipsum lorem.</p>
             <p>gulsum@busmail.com</p>
         </div>

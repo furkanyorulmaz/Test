@@ -1,3 +1,17 @@
+<?php
+session_start();
+#header("Location: login.php");
+$conn = mysqli_connect("localhost", "root", "", "busdb");
+if (!isset($_SESSION['email'])) {
+    $loginError = "You are not logged in";
+    echo '<script language="javascript">';
+    echo "alert('$loginError')";
+    echo '</script>';
+    #include("login.php");
+    exit();
+}
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -11,50 +25,81 @@
 <div class="navbar">
 
     <!-- Left-aligned links (default) -->
-    <a href="homepage_G.html">Homepage</a>
-    <a href="aboutUs_G.html">About Us</a>
-    <a href="contactUs_G.html">Contact Us</a>
-    <a href="support_G.html">Support</a>
+    <a href="homepage_RU.php">Homepage</a>
+    <a href="aboutUs_RU.php">About Us</a>
+    <a href="contactUs_RU.html">Contact Us</a>
+    <a href="support_RU.php">Support</a>
 
     <!-- Right-aligned links -->
     <div class="navbar-right">
-        <a href="login.html">Login</a>
-        <a href="registration.html">Registration</a>
+        <a href="registerUserProfile.html">
+            <?php echo "Hi! " . $_SESSION['email']; ?>
+        </a>
+        <a href="logout.php">Logout</a>
     </div>
 
 </div>
-
 <div class="big-image">
     <div id="list_journey">
-        <form action="#">
+        <form action="listOfJourneys_RU.php" method="POST" name="journeys">
             <label for="from">From</label>
             <select id="from" name="from">
-                <option value="ıst">İstanbul</option>
-                <option value="ankara">Ankara</option>
-                <option value="izmir">İzmir</option>
+                <option value="İstanbul">İstanbul</option>
+                <option value="Ankara">Ankara</option>
+                <option value="İzmir">İzmir</option>
+                <option value="Adana">Adana</option>
+                <option value="Bursa">Bursa</option>
+                <option value="Antep">Antep</option>
+                <option value="Muğla">Muğla</option>
+                <option value="Alanya">Alanya</option>
+                <option value="Ordu">Ordu</option>
             </select>
             <label for="destination">Destination</label>
             <select id="destination" name="destination">
-                <option value="ıst">İstanbul</option>
-                <option value="ankara">Ankara</option>
-                <option value="izmir">İzmir</option>
+                <option value="İstanbul">İstanbul</option>
+                <option value="Ankara">Ankara</option>
+                <option value="İzmir">İzmir</option>
+                <option value="Adana">Adana</option>
+                <option value="Bursa">Bursa</option>
+                <option value="Antep">Antep</option>
+                <option value="Muğla">Muğla</option>
+                <option value="Alanya">Alanya</option>
+                <option value="Ordu">Ordu</option>
             </select>
 
             <label for="date">Date</label>
             <br>
             <input type="date" id="date" name="date">
             <br>
-            <button type="submit" class="listbtn"><a href="listOfJourneys_G.html">List Journeys</a></button>
+            <button type="submit" class="listbtn" name="submit_registered">List Journeys</a></button>
         </form>
     </div>
 </div>
 
-
-<form action="#">
+<form action="viewTicketDetail_RU.html" method="POST">
     <input type="text" id="pnrinput" placeholder="Enter pnr number:" name="pnr">
-    <button type="submit" class="pnrbtn"><a href="viewTicketDetail_G.html">Find Ticket</a></button>
+    <button type="submit" class="pnrbtn" name="find_ticket">Find Ticket</button>
 </form>
 
+<?php
+if (isset($_POST['find_ticket'])) {
+    $pnr = mysqli_real_escape_string($conn, $_POST['pnr']);
+    $query = "SELECT * FROM ticket WHERE PNR LIKE '%$pnr%'";
+    $output = mysqli_query($conn, $query);
+    $queryResult = mysqli_num_rows($output);
+
+    if ($queryResult > 0) {
+        while ($row = mysqli_fetch_assoc($output)) {
+            echo " ".$row['PNR']. " ";
+            echo " ".$row['name']. " ";
+            echo " ".$row['surname']. " ";
+            echo " ".$row['emailaddress']. " ";
+        }
+    } else {
+        echo "There is no results matching your search !";
+    }
+}
+?>
 
 <h5 class="h5_class">MOST TRAVELED CITIES</h5>
 <div id="box_mostTraveledCities">
@@ -98,6 +143,7 @@
         <h3 class="h4_class"> News </h3>
         <p class="homepage_pid">There are many variations of passages of Lorem Ipsum available,</p>
     </div>
+</div>
 </div>
 
 <div id="row_id">

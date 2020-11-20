@@ -1,3 +1,7 @@
+<?php
+session_start();
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -12,15 +16,15 @@
 <div class="navbar">
 
     <!-- Left-aligned links (default) -->
-    <a href="homepage_RU.html">Homepage</a>
-    <a href="aboutUs_RU.html">About Us</a>
-    <a href="contactUs_RU.html">Contact Us</a>
-    <a href="support_RU.html">Support</a>
+    <a href="homepage_G.php">Homepage</a>
+    <a href="aboutUs_G.php">About Us</a>
+    <a href="contactUs_G.php">Contact Us</a>
+    <a href="support_G.php">Support</a>
 
     <!-- Right-aligned links -->
     <div class="navbar-right">
-        <a href="registerUserProfile.html">My Profile</a>
-        <a href="login.html">Logout</a>
+        <a href="login.php">Login</a>
+        <a href="registration.php">Registration</a>
     </div>
 
 </div>

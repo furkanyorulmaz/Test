@@ -11,47 +11,62 @@
 <div class="navbar">
 
     <!-- Left-aligned links (default) -->
-    <a href="homepage_RU.html">Homepage</a>
-    <a href="aboutUs_RU.html">About Us</a>
-    <a href="contactUs_RU.html">Contact Us</a>
-    <a href="support_RU.html">Support</a>
+    <a href="homepage_G.php">Homepage</a>
+    <a href="aboutUs_G.php">About Us</a>
+    <a href="contactUs_G.html">Contact Us</a>
+    <a href="support_G.php">Support</a>
 
     <!-- Right-aligned links -->
     <div class="navbar-right">
-        <a href="registerUserProfile.html">My Profile</a>
-        <a href="login.html">Logout</a>
+        <a href="login.php">Login</a>
+        <a href="registration.php">Registration</a>
     </div>
 
 </div>
+
 <div class="big-image">
     <div id="list_journey">
-        <form action="#">
+        <form action="listOfJourneys_G.php" method="POST">
             <label for="from">From</label>
             <select id="from" name="from">
-                <option value="ıst">İstanbul</option>
-                <option value="ankara">Ankara</option>
-                <option value="izmir">İzmir</option>
+                <option value="İstanbul">İstanbul</option>
+                <option value="Ankara">Ankara</option>
+                <option value="İzmir">İzmir</option>
+                <option value="Adana">Adana</option>
+                <option value="Bursa">Bursa</option>
+                <option value="Antep">Antep</option>
+                <option value="Muğla">Muğla</option>
+                <option value="Alanya">Alanya</option>
+                <option value="Ordu">Ordu</option>
             </select>
             <label for="destination">Destination</label>
             <select id="destination" name="destination">
-                <option value="ıst">İstanbul</option>
-                <option value="ankara">Ankara</option>
-                <option value="izmir">İzmir</option>
+                <option value="İstanbul">İstanbul</option>
+                <option value="Ankara">Ankara</option>
+                <option value="İzmir">İzmir</option>
+                <option value="Adana">Adana</option>
+                <option value="Bursa">Bursa</option>
+                <option value="Antep">Antep</option>
+                <option value="Muğla">Muğla</option>
+                <option value="Alanya">Alanya</option>
+                <option value="Ordu">Ordu</option>
             </select>
 
             <label for="date">Date</label>
             <br>
             <input type="date" id="date" name="date">
             <br>
-            <button type="submit" class="listbtn"><a href="listOfJourneys_RU.html">List Journeys</a></button>
+            <button type="submit" class="listbtn" name="submit_guest">List Journeys</a></button>
         </form>
     </div>
 </div>
 
+
 <form action="#">
     <input type="text" id="pnrinput" placeholder="Enter pnr number:" name="pnr">
-    <button type="submit" class="pnrbtn"><a href="viewTicketDetail_RU.html">Find Ticket</a></button>
+    <button type="submit" class="pnrbtn"><a href="viewTicketDetail_G.html">Find Ticket</a></button>
 </form>
+
 
 <h5 class="h5_class">MOST TRAVELED CITIES</h5>
 <div id="box_mostTraveledCities">
@@ -78,23 +93,22 @@
 
 <h5 class="h5_class">OPPORTUNITIES</h5>
 <div id="box_class_icons">
-        <div class="box_inside_icons">
-            <div class="image_icon"><img class="img_size" src="img/ann.png"></div>
-            <h3 class="h4_class"> Announcements </h3>
-            <p class="homepage_pid">There are many variations of passages of Lorem Ipsum available,</p>
-        </div>
+    <div class="box_inside_icons">
+        <div class="image_icon"><img class="img_size" src="img/ann.png"></div>
+        <h3 class="h4_class"> Announcements </h3>
+        <p class="homepage_pid">There are many variations of passages of Lorem Ipsum available,</p>
+    </div>
 
-        <div class="box_inside_icons">
-            <div class="image_icon"><img class="img_size" src="img/campaing.png"></div>
-            <h3 class="h4_class"> Campaigns </h3>
-            <p class="homepage_pid">There are many variations of passages of Lorem Ipsum available,</p>
-        </div>
+    <div class="box_inside_icons">
+        <div class="image_icon"><img class="img_size" src="img/campaing.png"></div>
+        <h3 class="h4_class"> Campaigns </h3>
+        <p class="homepage_pid">There are many variations of passages of Lorem Ipsum available,</p>
+    </div>
 
-        <div class="box_inside_icons">
-            <div class="image_icon"><img class="img_size" src="img/news.png"></div>
-            <h3 class="h4_class"> News </h3>
-            <p class="homepage_pid">There are many variations of passages of Lorem Ipsum available,</p>
-        </div>
+    <div class="box_inside_icons">
+        <div class="image_icon"><img class="img_size" src="img/news.png"></div>
+        <h3 class="h4_class"> News </h3>
+        <p class="homepage_pid">There are many variations of passages of Lorem Ipsum available,</p>
     </div>
 </div>
 
@@ -121,7 +135,7 @@
 
     <div class="col_class">
         <h2 class="topic">Contact Us</h2>
-        <p id="phone_num"> <img src="img/telephone.png" width="35px" height="35px"> 0890 960 66 77 </p>
+        <p id="phone_num"><img src="img/telephone.png" width="35px" height="35px"> 0890 960 66 77 </p>
         <ul>
             <p id="text_socialmedia">Social Medias</p>
             <div class="div_social_medias">

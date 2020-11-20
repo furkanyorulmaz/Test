@@ -1,3 +1,16 @@
+<?php
+session_start();
+$conn = mysqli_connect("localhost", "root", "", "busdb");
+#include('database.php');
+if (!isset($_SESSION['email'])) {
+    $loginError = "You are not logged in";
+    echo '<script language="javascript">';
+    echo "alert('$loginError')";
+    echo '</script>';
+    #include("login.php");
+    exit();
+}
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -13,8 +26,8 @@
 
     <!-- Right-aligned links -->
     <div class="navbar-right">
-        <a href="registerUserProfile.html">My Profile</a>
-        <a href="login.html">Logout</a>
+        <a href="officerProfile.php">Officer Profile</a>
+        <a href="logout.php">Logout</a>
     </div>
 
 </div>

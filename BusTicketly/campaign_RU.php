@@ -5,27 +5,28 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=0.5 maxmum-scale=1.0"/>
     <link rel="stylesheet" type="text/css" href="main.css">
 
-    <title>CAMPAIGN G</title>
+    <title>SUPPORT RU</title>
 </head>
 <body>
 <!-- Navbar -->
 <div class="navbar">
 
     <!-- Left-aligned links (default) -->
-    <a href="homepage_G.html">Homepage</a>
-    <a href="aboutUs_G.html">About Us</a>
-    <a href="contactUs_G.html">Contact Us</a>
-    <a href="support_G.html">Support</a>
+    <a href="homepage_RU.php">Homepage</a>
+    <a href="aboutUs_RU.php">About Us</a>
+    <a href="contactUs_RU.php">Contact Us</a>
+    <a href="support_RU.php">Support</a>
 
     <!-- Right-aligned links -->
     <div class="navbar-right">
-        <a href="login.html">Login</a>
-        <a href="registration.html">Registration</a>
+        <a href="registerUserProfile.php">My Profile</a>
+        <a href="login.php">Logout</a>
     </div>
 
 </div>
 
 <h2 style="text-align:center">ALL CAMPAIGNS FOR CUSTOMERS</h2>
+
 <div class="container">
     <form action="/action_page.php">
         <p style="margin-left: 300px; font-weight: bolder">Tıcket Campaigns</p>
@@ -40,6 +41,7 @@
         <br>
     </form>
 </div>
+
 
 
 <footer class="main_footer">

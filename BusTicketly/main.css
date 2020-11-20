@@ -616,14 +616,22 @@ button:hover {
 /******************SEAT PLAN CSS*****************/
 
 /* The Modal (background) */
+
+.okbtn {
+    align-items: center;
+    width: 40%;
+    padding-left: 20px;
+}
+
 .container_modal {
     padding: 16px;
     text-align: center;
+    width: 50%;
 }
 
 
 .modal {
-    display: marker; /* Hidden by default */
+    display: none; /* Hidden by default */
     position: fixed; /* Stay in place */
     z-index: 1; /* Sit on top */
     left: 0;

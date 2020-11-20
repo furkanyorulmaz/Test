@@ -8,7 +8,7 @@
 </head>
 
 <body>
-<form action="#" style="border:3px solid #ccc">
+<form action="#" style="border:3px solid #ccc" method="POST">
     <div class="container">
         <h1>Forgot Password</h1>
         <p>Please enter email for change password.</p>
@@ -18,9 +18,11 @@
 
         <div class="cancel_signup">
             <button type="button" class="cancelbtn" style="width: 20%"><a href="homepage_G.html">Cancel</a></button>
-            <button type="submit" class="addjourneybtn"><a href="login.html">Next</a></button>
+            <button type="submit" class="addjourneybtn" name="send_email">Send</a></button>
         </div>
     </div>
 </form>
-</body>
+</body>  
 </html>
+
+
